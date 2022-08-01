@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.grid-container{
+    margin: 0px auto;
+    padding: 20px;
+    width: 1200px;
+    height: 700px;
+    background:black;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    grid-template-rows: 1fr 5fr ;
+    grid-template-areas:
+        "header header"
+        "aside article";
+
+        .grid-item1{
+            background: linear-gradient(blue, aqua);
+            grid-area: header;
+            padding: 0 50px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+            p{
+                color: white;
+                text-shadow: 5px 5px 10px black;
+                font-weight: 800;
+                font-size: 30px;
+            }
+            ul{
+                display: flex;
+                width: 300px;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                li{
+                    list-style: none;
+                    color: white;
+                    text-shadow: 5px 5px 10px black;
+                    font-weight: 700;
+                    font-size: 25px;
+                    &:hover{
+                        color: black;
+                    text-shadow: 5px 5px 10px white;
+                    }
+                }
+            }
+        }
+        .grid-item2{
+            background: linear-gradient(green, lime);
+            grid-area: aside;
+            margin-top: 20px;
+            border-radius: 20px;
+            background: linear-gradient(blue, aqua);
+            display: grid;
+            padding: 10px;
+            ul{
+                li{
+                    text-align: center;
+                    list-style: none;
+                    margin-bottom: 7px;
+                     &:nth-child(1){
+                    color: rgb(191, 0, 0);
+                    text-shadow: 3px 3px 5px black;
+                    }
+                    button{
+                        width: 200px;
+                        height: 35px;
+                        background: rgb(0, 162, 255);
+                        border: 3px solid rgb(183, 0, 0);
+                        border-radius: 50px;
+                        font-weight: 500;
+                        font-size: 20px;
+                        color: white;
+                        text-shadow: 3px 3px 5px black;
+                        &:hover{
+                            font-weight: 600;
+                            font-size: 20px;
+                            background: rgb(255, 255, 255);
+                            color: black;
+                            text-shadow: 3px 3px 5px rgb(0, 106, 255);
+                        }
+                    }
+                }       
+        
+            }
+        }
+        .grid-item3{
+            background:linear-gradient(blue, aqua);
+            grid-area: article;
+            margin-top: 20px;
+            margin-left: 20px;
+            border-radius: 20px;
+            display: flex;
+            padding: 20px 40px 20px 40px; 
+            .new{
+                width: 50%;
+                padding: 20px;
+                img{
+                    width: 350px;
+                }
+                p{
+                    text-align: center;
+                    color: white;
+                    text-shadow: 5px 5px 10px black;
+                    font-weight: 700;
+                    font-size: 25px;
+                    margin-top: 40px;
+                    &:hover{
+                        color: black;
+                    text-shadow: 5px 5px 10px rgb(51, 45, 45);
+                    }
+                }
+            }
+            .old{
+                width: 50%;
+                padding: 10px  20px;
+                img{
+                    width: 350px;
+                }
+                p{
+                    text-align: center;
+                    color: white;
+                    text-shadow: 5px 5px 10px black;
+                    font-weight: 700;
+                    font-size: 25px;
+                    margin-top: 20px;
+                    &:hover{
+                        color: black;
+                    text-shadow: 5px 5px 10px rgb(51, 45, 45);
+                    }
+                }
+            }
+        }
+}
+
